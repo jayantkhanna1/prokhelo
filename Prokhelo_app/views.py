@@ -179,7 +179,7 @@ class AdminMethods:
             request.session['PrivateTokenProkheloAdmin'] = ''.join(random.choices(string.ascii_lowercase +string.digits, k=30))
             admin.private_token = request.session['PrivateTokenProkheloAdmin']
             admin.save()
-            return redirect('admin_dashboard')
+            return redirect('admin')
 
         # If user does not exists then redirecting to login page with error message
         else:
